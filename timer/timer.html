@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS-TIMER</title>
+        <link rel="stylesheet" href="timer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>JS-TIMER</h1>
+        <form>
+            <h2>Select your time:</h2>
+            <ul>    
+                <li>
+                    <h3>Minutes</h3>
+                    <input id="timeChoseMinutes" type="number" value="0" min="0" max="60" required>
+                </li>
+                <li>
+                    <h3>Seconds</h3>
+                    <input id="timeChoseSeconds" type="number" value="0" min="0" max="60" required>
+                </li>
+            </ul>
+            <button type="button" id="submitButton">Submit</button>
+            <button type="button" id="resetButton">Reset</button>
+        </form>
+        <div id="big-id">
+            <div id="timerMinutes"></div>
+            <h4>:</h4>
+            <div id="timerSeconds"></div>
+        </div>
+        <script>
+            
+            var counterMin;
+            var counterSec = 0;
+            var submitBut = document.getElementById('submitButton');
+            var restartBut = document.getElementById('resetButton'); 
+            var z = 59;
+            
+            
+            
+            restartBut.onclick = function(){
+                counterSec == 0;
+                document.getElementById('timeChoseSeconds').value = 0;
+                document.getElementById('timeChoseMinutes').value = 0;
+                document.getElementById('timerSeconds').innerHTML = '00';
+                document.getElementById('timerMinutes').innerHTML = '00';
+                document.getElementById('timerSeconds').value = 0;
+                document.getElementById('timerMinutes').value = 0;
+                clearInterval(secCounter);
+                
+            }
+                
+            
+           function counter(){
+                if(document.getElementById('timeChoseSeconds').value >= 0 && document.getElementById('timeChoseSeconds').value < 10){
+                    document.getElementById('timerSeconds').innerHTML = '0' +     (document.getElementById('timeChoseSeconds').value - counterSec);
+                    counterSec++;
+                    if(document.getElementById('timeChoseSeconds').value >= 10 && document.getElementById('timeChoseSeconds').value < 60){
+                        document.getElementById('timerSeconds').innerHTML = (document.getElementById('timeChoseSeconds').value - counterSec);
+                        counterSec++;
+                    }
+                }
+           }
+            
+            
+            
+            submitBut.onclick= function(){
+                secCounter = setInterval(counter,1000);
+            }
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
+
+
+
