@@ -1,0 +1,132 @@
+
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Special Elite', cursive; */
+
+/* font-family: 'Butcherman', cursive;
+font-family: 'VT323', monospace;
+font-family: 'Bangers', cursive;
+font-family: 'Fontdiner Swanky', cursive;
+font-family: 'Creepster', cursive; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html,
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: black;
+}
+
+#main-opening {
+    background-color: black;
+    height: 953px;
+    font-family: 'Bangers', cursive;
+    
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    
+    /*- position -*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#open {
+    display: block;
+    font-size: 750%;
+    text-shadow: 0px 0px 100px rgba(240, 240, 240, 0.2),0px 0px 100px rgba(250, 250, 250, 0.5),0px 0px 100px rgba(255, 255, 255,0.8);
+    color: rgb(255, 245, 245);  
+    transition: 2s all;
+}
+
+#open:hover {
+    text-shadow: 0 0 200px rgba(255, 255, 255, 0.623),0 0 200px rgb(255, 255, 255,0.8),0 0 200px rgb(255, 255, 255);
+    color: white;
+    font-size: 720%;
+}
+
+#come_in {
+    font-size: 425%;
+    text-shadow: 0px 0px 100px rgba(128, 0, 128, 0.3),0px 0px 100px rgba(128, 0, 128, 0.6),0px 0px 100px rgba(128, 0, 128, 0.9);
+    color: rgb(211, 0, 211);
+}
+
+#come_in:hover {
+    text-shadow: 0 0 100px rgba(253, 0, 253, 0.884), 0 0 100px rgb(197, 17, 197, 0.9), 0 0 100px rgb(199, 5, 199);
+    color: rgb(255, 0, 255);
+    font-size: 400%;
+}
+
+/* 
+#come_in {
+    font-size: 350%;
+    text-shadow: 0px 0px 100px rgba(255, 0, 0, 0.30),0px 0px 100px rgba(255, 0, 0, 0.60),0px 0px 100px rgba(255, 0, 0, 0.90);
+    color: rgb(255, 19, 19);
+}
+
+#come_in:hover {
+    text-shadow: 0 0 100px red, 0 0 40px FireBrick, 0 0 8px DarkRed;
+    color: red;
+    font-size: 375%;
+} */
+
+#p-color{
+    animation: open 4s linear infinite;
+}
+
+#o-color {
+    animation: come_in 2s linear infinite;
+}
+
+#i-color {
+    animation: come_in 5s linear infinite;
+}
+
+#color {
+    animation: come_in 8s linear infinite;
+}
+
+
+
+@keyframes open {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 0.99;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+        text-shadow: 0.5;
+    }
+}
+
+@keyframes come_in {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 0.99;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+        text-shadow: 0.3;
+    }  
+}
+
+.hide{
+    opacity: 0;
+    transition: 1s;
+}
+
+.clownImg {
+    width: 100px;
+}
+
+
+
+
+#horror {
+    display: none;
+}
