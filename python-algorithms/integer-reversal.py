@@ -12,7 +12,15 @@ def reverse_integer(num):
             newNum = newNum + stringNum[i]
         print(int(newNum))
         
-
 reverse_integer(-5)
-        
+
+
+def reverse_integer(num):
+    if num == 1 or num > 1:
+        print(str(num)[::-1])
+    else:
+        new_num = num * (-1)
+        print("-" + str(new_num)[::-1])
+
+reverse_integer(-500)
         
