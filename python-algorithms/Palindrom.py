@@ -29,10 +29,3 @@ def is_palindrom(str):
 
 is_palindrome("abccdcba")
 
-
-# using reverse
-
-def is_palindrome(i):
-    return i == reverse(i)
-
-is_palindrom("abba")
